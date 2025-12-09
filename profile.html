@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Feel Mati Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="profile.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="feel-logo">
+                <span class="feel">Feel</span><span class="mati">MATI</span>
+            </h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link btn-primary">Book Now</a></li>
+                <a href="profile.html" class="nav-link profile-icon img profile-icon img:hover" title="Profile">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="url(#gradient)">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066CC"/>
+                                <stop offset="100%" style="stop-color:#00B8A9"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </a>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <!-- Sidebar Navigation -->
+        <aside class="profile-sidebar">
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="login">Login</button>
+                <button class="nav-item" data-section="register">Register</button>
+                <button class="nav-item" data-section="dashboard" id="dashboardBtn" style="display:none;">Dashboard</button>
+                <button class="nav-item" data-section="profile-info" id="profileInfoBtn" style="display:none;">My Profile</button>
+                <button class="nav-item" data-section="settings" id="settingsBtn" style="display:none;">Settings</button>
+                <button class="nav-item logout-btn" id="logoutBtn" style="display:none;">Logout</button>
+            </nav>
+        </aside>
+
+
+        <!-- Main Content Area -->
+        <main class="profile-main">
+            <!-- Login Section -->
+            <section class="profile-section active" id="login-section">
+                <div class="section-header">
+                    <h1>Welcome Back</h1>
+                    <p>Login to your Feel Mati Hub account</p>
+                </div>
+                <form id="loginForm" class="auth-form auth-form-login">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <div class="card-footer-LM">
+                        <button type="submit" class="btn btn-large">Login</button>
+                    </div>
+                    <p class="auth-toggle">Don't have an account? <a href="#" class="toggle-link" data-section="register">Register here</a></p>
+                </form>
+            </section>
+
+            <!-- Register Section -->
+            <section class="profile-section" id="register-section">
+                <div class="section-header">
+                    <h1>Create Account</h1>
+                    <p>Join Feel Mati Hub and start exploring</p>
+                </div>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email Address</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPhone">Phone Number</label>
+                        <input type="tel" id="registerPhone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirm">Confirm Password</label>
+                        <input type="password" id="registerConfirm" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    <p class="auth-toggle">Already have an account? <a href="#" class="toggle-link" data-section="login">Login here</a></p>
+                </form>
+            </section>
+
+            <!-- Dashboard Section -->
+            <section class="profile-section" id="dashboard-section">
+                <div class="section-header">
+                    <h1>Your Dashboard</h1>
+                    <p>Welcome back, <span id="welcomeName"></span>!</p>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="stat-card-dash">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="matiVisits">0</div>
+                            <div class="stat-label">Mati City Visits</div>
+                        </div>
+                    </div>
+                    <div class="stat-card-dash">
+                        <div class="stat-icon">💻</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="websiteVisits">0</div>
+                            <div class="stat-label">Website Visits</div>
+                        </div>
+                    </div>
+                    <div class="stat-card-dash">
+                        <div class="stat-icon">📍</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="destinationsExplored">0</div>
+                            <div class="stat-label">Destinations Explored</div>
+                        </div>
+                    </div>
+                    <div class="stat-card-dash">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="memberSince"></div>
+                            <div class="stat-label">Member Since</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list" id="activityList">
+                        <div class="activity-item">
+                            <div class="activity-icon">🏖️</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Visited Dahican Beach</div>
+                                <div class="activity-time">2 days ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">⛪</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Visited Mati Church</div>
+                                <div class="activity-time">1 week ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🌴</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Viewed Waniban Island</div>
+                                <div class="activity-time">2 weeks ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Info Section -->
+            <section class="profile-section" id="profile-info-section">
+                <div class="section-header">
+                    <h1>My Profile</h1>
+                    <p>Manage your personal information</p>
+                </div>
+                <div class="profile-info-card">
+                    <div class="profile-avatar">
+                        <img id="avatarImage" src="about_images/member-3.jpg" alt="Profile Avatar">
+                    </div>
+                    <div class="profile-details">
+                        <div class="detail-group">
+                            <label>Full Name</label>
+                            <p id="profileFullName"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Email Address</label>
+                            <p id="profileEmail"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Phone Number</label>
+                            <p id="profilePhone"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Member Since</label>
+                            <p id="profileMemberSince"></p>
+                        </div>
+                        <button class="btn btn-secondary" id="editProfileBtn">Edit Profile</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="profile-section" id="settings-section">
+                <div class="section-header">
+                    <h1>Settings</h1>
+                    <p>Manage your preferences</p>
+                </div>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <div class="setting-header">
+                            <h3>Email Notifications</h3>
+                            <p>Receive updates about new destinations and offers</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="emailNotifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-header">
+                            <h3>Track Location</h3>
+                            <p>Allow us to track your visits to Mati City</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="trackLocation" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-header">
+                            <h3>Dark Mode</h3>
+                            <p>Enable dark mode for comfortable viewing</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkMode">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-actions">
+                    <button class="btn btn-primary">Save Settings</button>
+                    <button class="btn btn-secondary" id="changePasswordBtn">Change Password</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>5000+</h3>
+                    <p>Happy Guests</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Unique Experiences</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4.9★</h3>
+                    <p>Average Rating</p>
+                </div>
+                <div class="stat-card">
+                    <h3>8 Years</h3>
+                    <p>In Business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Feel Mati Hub</h4>
+                <p>Your gateway to the untouched beauty of Davao Oriental's coastal paradise.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: feelmatihub@gmail.com</p>
+                <p>Phone: +63 964-146-9693</p>
+                <p>Location: Mati City, Davao Oriental</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61584337844512" target="_blank" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">t</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feel Mati Hub. All rights reserved. Crafted with love for tourism.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

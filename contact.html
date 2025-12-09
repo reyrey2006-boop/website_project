@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Bookings - Feel Mati Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="feel-logo">
+                <span class="feel">Feel</span><span class="mati">MATI</span>
+            </h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active btn-primary">Book Now</a></li>
+                <a href="profile.html" class="nav-link profile-icon img profile-icon img:hover" title="Profile">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="url(#gradient)">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066CC"/>
+                                <stop offset="100%" style="stop-color:#00B8A9"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </a>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('gallery_images/nature-3.jpg')">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Contact & Bookings</h1>
+            <p>Let's plan your Mati adventure</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="value-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Mati City, Davao Oriental</p>
+                    <p>Philippines 8200</p>
+                </div>
+                <div class="value-card">
+                    <div class="info-icon">📱</div>
+                    <h3>Phone</h3>
+                    <p>+63 964-146-9693</p>
+                    <p>+63 917 123 4567</p>
+                </div>
+                <div class="value-card">
+                    <div class="info-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>feelmatihub@gmail.com</p>
+                    <p>bookingsfeelmatihub@gmail.com</p>
+                </div>
+                <div class="value-card">
+                    <div class="info-icon">🕐</div>
+                    <h3>Hours</h3>
+                    <p>Mon - Sun: 8:00 AM - 6:00 PM</p>
+                    <p>Emergency: 24/7 Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Send us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Interested Destination *</label>
+                            <select id="destination" name="destination" required>
+                                <option value="">Select a destination</option>
+                                <option value="dahican">Dahican Beach</option>
+                                <option value="sleeping-dinosaur">Sleeping Dinosaur</option>
+                                <option value="saga-flying-club">Saga Flying Club</option>
+                                <option value="blk9-korean-restaurant">BLK9 Korean Restaurant</option>
+                                <option value="subngan-museum">Subngan Museum</option>
+                                <option value="waniban-island">Waniban Island</option>
+                                <option value="masao-view-resort">Masao View Resort</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dates">Preferred Dates *</label>
+                            <input type="date" id="dates" name="dates" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <input type="number" id="guests" name="guests" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget (₱) *</label>
+                            <input type="number" id="budget" name="budget" min="0" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your ideal Mati experience..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Subscribe to our newsletter for updates and special offers</label>
+                    </div>
+                    <div class="card-footer-LM">
+                        <button type="submit" class="btn btn-large">Submit Booking Request</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I book a tour?</h3>
+                    <p>Simply fill out our booking form with your preferred destination and dates. We'll confirm availability and send you a customized itinerary within 24 hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's the best time to visit Mati?</h3>
+                    <p>December to May is ideal with sunny weather. However, Mati is beautiful year-round. We operate rain or shine with proper safety precautions.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer group discounts?</h3>
+                    <p>Yes! Groups of 10+ receive special rates. Contact our team directly for custom group packages and pricing.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your cancellation policy?</h3>
+                    <p>Full refund if cancelled 2 weeks before. 50% refund within 2 weeks. Emergency cancellations handled on a case-by-case basis.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are tours suitable for families with kids?</h3>
+                    <p>We offer age-appropriate activities and family-friendly packages. Our guides are experienced with children.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need special certifications for diving?</h3>
+                    <p>PADI certification is recommended but not required. We offer beginner courses and supervised dives for all levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Feel Mati Hub</h4>
+                <p>Your gateway to the untouched beauty of Davao Oriental's coastal paradise.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: feelmatihub@gmail.com</p>
+                <p>Phone: +63 964-146-9693</p>
+                <p>Location: Mati City, Davao Oriental</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61584337844512" target="_blank" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">t</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feel Mati Hub. All rights reserved. Crafted with love for tourism.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Feel Mati Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="feel-logo">
+                <span class="feel">Feel</span><span class="mati">MATI</span>
+            </h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link btn-primary">Book Now</a></li>
+                <a href="profile.html" class="nav-link profile-icon img profile-icon img:hover" title="Profile">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="url(#gradient)">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066CC"/>
+                                <stop offset="100%" style="stop-color:#00B8A9"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </a>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('gallery_images/beach-1.jpg')">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Explore All Destinations</h1>
+            <p>Discover the best that Mati has to offer</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="beach">Beach</button>
+                <button class="filter-btn" data-filter="adventure">Adventure</button>
+                <button class="filter-btn" data-filter="isle">Isle</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="destinations-all">
+        <div class="container">
+            <div class="destinations-grid">
+                <!-- Beach Destinations -->
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/dahican-beach.jpg" alt="White Sand Beach">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Dahican Beach</h3>
+                        <p>Dahican Beach is a stunning 7-kilometer stretch of white sand and turquoise waves — perfect for surfers, adventurers, and anyone chasing the sea breeze.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (234 reviews)</span>
+                            <span class="price">₱2,000/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-dahican-beach.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/blue-bless.jpg" alt="blue bless">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Blue Bless Beach Resort</h3>
+                        <p>Blue Bless Beach Resort — A vibrant beach resort where crystal-clear waters, soft waves, and pure coastal serenity meet for the perfect escape and nature retreat.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (189 reviews)</span>
+                            <span class="price">₱2,500/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-blue-bless.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/masao-view.jpg" alt="masao view">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Masao View Resort</h3>
+                        <p>Masao View Resort — a peaceful and stunning hillside escape offering refreshing ocean views, cool breezes, breathtaking scenes and an unforgettable nature retreat.          </p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (267 reviews)</span>
+                            <span class="price">₱2,800/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                             <a href="learn-more/learn-more-masao-view.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/mayo-beach.jpg" alt="mayo beach">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Mayo Beach Resort</h3>
+                        <p>Mayo Beach Resort — a sun-kissed paradise with powdery sands, gentle waves, and the perfect spot to unwind and soak in the tropical vibes.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (180 reviews)</span>
+                            <span class="price">₱3,500/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                           <a href="learn-more/learn-more-mayo-beach.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/golden-beach.jpg" alt="golden beach">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Golden Beach Resort-Lanca</h3>
+                        <p>Golden Beach Resort Lanca — where golden sands meet sparkling waters, creating the ultimate tropical getaway relaxation and fun.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (109 reviews)</span>
+                            <span class="price">₱3,100/day</span>
+                        </div>
+                        <div class ="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-golden-beach.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/amery-beach.jpg" alt="amery beach">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Amery Luxury Palm Villas</h3>
+                        <p>Amery Luxury Palm Villas — Stunning and Awesome indulge in ultimate comfort and tropical elegance surrounded by swaying palms and serene ocean.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (389 reviews)</span>
+                            <span class="price">₱5,100/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-amery-beach.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/dluxe-resort.jpg" alt="dluxe resort">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>D'Luxe Resort Mati</h3>
+                        <p>D’Luxe Resort Mati — a stylish beachfront combines breathtaking ocean views, perfect for relaxing, and experiencing the best of Mati’s coastal beauty.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (256 reviews)</span>
+                            <span class="price">₱3,100/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-dluxe-resort.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="beach">
+                    <div class="dest-image">
+                        <img src="destinations_images/ok-resort.jpg" alt="ok resort">
+                        <span class="dest-badge">Beach</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Ok Resort Hotel</h3>
+                        <p>OK Resort Hotel — a cozy and welcoming stay offering comfort, convenience, and easy access to the vibrant beaches and attractions of Mati City.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (189 reviews)</span>
+                            <span class="price">₱2,150/day</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-ok-resort.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adventure Destinations -->
+                <div class="dest-card" data-category="adventure">
+                    <div class="dest-image">
+                        <img src="destinations_images/saga-flying-club.jpg" alt="Saga Flying Club">
+                        <span class="dest-badge">Adventure</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Saga Flying Club</h3>
+                        <p>Saga Flying Club — where passion meets the sky, stunning view that giving you a thrilling bird’s-eye view of Mati’s coastlines and landscapes from above.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (312 reviews)</span>
+                            <span class="price">₱3,500/fly</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-saga-flying-club.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="adventure">
+                    <div class="dest-image">
+                        <img src="destinations_images/subangan-museum.jpg" alt="subangan-museum">
+                        <span class="dest-badge">Adventure</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Subangan Museum</h3>
+                        <p>Subangan Museum — a vibrant gateway to Mati’s history and culture, showcasing the stories, treasures that shaped Davao Oriental.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★☆ (198 reviews)</span>
+                            <span class="price">₱200/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-subangan-museum.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="adventure">
+                    <div class="dest-image">
+                        <img src="destinations_images/free-diving.jpg" alt="Free Diving">
+                        <span class="dest-badge">Adventure</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Free Diving</h3>
+                        <p>Freediving in Mati — a thrilling underwater experience where you explore crystal-clear depths, vibrant marine life, and the serene silence beneath the waves.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (276 reviews)</span>
+                            <span class="price">free</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-free-diving.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="adventure">
+                    <div class="dest-image">
+                        <img src="destinations_images/winter-trail.jpg" alt="Winter Trail">
+                        <span class="dest-badge">Adventure</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Winter Trail</h3>
+                        <p>Winter Trail — an adventurous mountain route in Mati offering cool winds, scenic overlooks, and a refreshing escape into nature’s quiet and beauty.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (200 reviews)</span>
+                            <span class="price">free</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-winter-trail.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- isle Destinations -->
+                <div class="dest-card" data-category="isle">
+                    <div class="dest-image">
+                        <img src="destinations_images/sleeping-dinosaur.jpg" alt="sleeping-dinosaur">
+                        <span class="dest-badge">Isle</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Sleeping Dinosaur</h3>
+                        <p>Sleeping Dinosaur — a breathtaking coastal landmark shaped like a resting giant and turning every traveler’s gaze into awe and wonder, truly unforgettable.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★☆ (145 reviews)</span>
+                            <span class="price">free</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-sleeping-dinosaur.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="isle">
+                    <div class="dest-image">
+                        <img src="destinations_images/waniban-island.jpg" alt="waniban-island">
+                        <span class="dest-badge">Isle</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Waniban Island</h3>
+                        <p>Waniban Island — a peaceful tropical escape with powdery sands, turquoise waters, and a pure island vibe perfect for rest, swim, and slow moments in paradise.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★☆ (155 reviews)</span>
+                            <span class="price">500/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-waniban-island.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="isle">
+                    <div class="dest-image">
+                        <img src="destinations_images/pujada-island.jpg" alt="pujada-island">
+                        <span class="dest-badge">Isle</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Pujada Island</h3>
+                        <p>Pujada Island — a pristine paradise of white shores, crystal-blue waters, and untouched beauty, ideal for quiet getaways, beach walks, and stunning ocean views.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★☆ (162 reviews)</span>
+                            <span class="price">400/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-pujada-island.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="isle">
+                    <div class="dest-image">
+                        <img src="destinations_images/oak-island.jpg" alt="oak-island">
+                        <span class="dest-badge">Isle</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Oak Island</h3>
+                        <p>Oak Island — a refreshing destination surrounded by calm waters and natural charm, perfect for day trips and peaceful escapes away from the crowd.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★☆ (222 reviews)</span>
+                            <span class="price">780/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-oak-island.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Destinations -->
+                <div class="dest-card" data-category="food">
+                    <div class="dest-image">
+                        <img src="destinations_images/ciangi-restau.jpg" alt="ciangi-restau">
+                        <span class="dest-badge">Food</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Ciangi Restaurant</h3>
+                        <p>Ciangi Restaurant — a flavorful dining spot in Mati known for its comforting dishes, cozy atmosphere, and the perfect blend of good food and good moments to share.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (289 reviews)</span>
+                            <span class="price">₱1,600/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-ciangi-restaurant.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="food">
+                    <div class="dest-image">
+                        <img src="destinations_images/blk9-restau.jpg" alt="Cooking Class">
+                        <span class="dest-badge">Food</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>BLK9 Korean Cafe</h3>
+                        <p>BLK9 — a modern social spot in Mati offering great food, chill ambiance, and the perfect place to hang out, dine, and enjoy the vibrant local scene.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (500 reviews)</span>
+                            <span class="price">₱2,200/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-blk9-korean-cafe.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-card" data-category="food">
+                    <div class="dest-image">
+                        <img src="destinations_images/cafe-adelina.jpg" alt="Beachside Dining">
+                        <span class="dest-badge">Food</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>Cafe Adelina</h3>
+                        <p>Café Adelina — a charming café in Mati serving comforting meals, fresh brews, and a cozy atmosphere that invites you to slow down, relax, and savor every moment.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (301 reviews)</span>
+                            <span class="price">₱1,900/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-cafe-adelina.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest-card" data-category="food">
+                    <div class="dest-image">
+                        <img src="destinations_images/jmz-eatery.jpg" alt="Beachside Dining">
+                        <span class="dest-badge">Food</span>
+                    </div>
+                    <div class="dest-content">
+                        <h3>JMz Eatery</h3>
+                        <p>JMZ Eatery — a local favorite in Mati offering delicious comfort food, generous servings, and a warm, casual dining vibe perfect for any time of day.</p>
+                        <div class="dest-meta">
+                            <span class="rating">★★★★★ (411 reviews)</span>
+                            <span class="price">₱1,750/person</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="contact.html" class="btn btn-small">Book Visit</a>
+                            <a href="learn-more/learn-more-jmz-eatery.html" class="card-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Feel Mati Hub</h4>
+                <p>Your gateway to the untouched beauty of Davao Oriental's coastal paradise.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: feelmatihub@gmail.com</p>
+                <p>Phone: +63 964-146-9693</p>
+                <p>Location: Mati City, Davao Oriental</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61584337844512" target="_blank" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">t</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feel Mati Hub. All rights reserved. Crafted with love for tourism.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
