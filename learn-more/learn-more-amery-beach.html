@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Dahican Beach - Feel Mati Hub</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="feel-logo">
+                <span class="feel">Feel</span><span class="mati">MATI</span>
+            </h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search destinations...">
+                <button id="searchBtn" class="search-btn">🔍</button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link active">Home</a></li>
+                <li><a href="/destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+                <li><a href="/contact.html" class="nav-link btn-primary">Book Now</a></li>
+                <a href="/profile.html" class="nav-link profile-icon img profile-icon img:hover" title="Profile">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="url(#gradient)">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066CC"/>
+                                <stop offset="100%" style="stop-color:#00B8A9"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </a>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Destination Details -->
+    <section class="destination-detail-section">
+        <div class="container">
+
+        <!-- Hero Image -->
+        <div class="destination-hero-image reveal delay-1">
+            <img src="../destinations_images/amery-beach.jpg" alt="Amery Beach hero image" loading="lazy">
+        </div>
+
+      <!-- Title -->
+        <h2 class="destination-title reveal delay-2">Amery Luxury Palm Villas</h2>
+      <!-- ROW: Map | Description -->
+        <div class="detail-two-column">
+            <!-- Map (left) -->
+            <div class="detail-map-section">
+                <div class="map-iframe">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.023!2d126.369!3d6.934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sDahican+Beach!2sMatı+City!5e0!3m2!1sen!2sph!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Description (right) -->
+            <div class=" dest-content destination-card" aria-label="Description">
+                <h2 class="destination-title-des">Description</h2>
+                <p>Amery Beach in Mati, Davao Oriental is a serene coastal destination known for its crystal-clear waters, swaying palm trees, and peaceful tropical atmosphere. It is an ideal spot for relaxation, beachfront stays, and scenic sunrise views, offering guests a quiet escape from crowded tourist areas. With its natural beauty and calm surroundings, Amery Beach is perfect for travelers seeking comfort, privacy, and a true island-style отдых experience.</p>
+            </div>
+        </div> 
+      <!-- 3 Info Cards -->
+        <div class="destination-info-grid">
+            <div class="dest-content destination-card">
+                <h3>📍 Location Details</h3>
+                <p>Amery Beach is located in Dahican, Mati City, Davao Oriental, just 5 kilometers from the city center and easily accessible by tricycle or private vehicle.</p>
+            </div>
+            <div class="dest-content destination-card">
+                <h3>🌞 Best Time to Visit</h3>
+                <p>The best time to visit Amery Beach is during the dry season from November to April, when the seas are calm and the weather is perfect for swimming and outdoor activities.</p>
+            </div>
+            <div class="dest-content destination-card">
+                <h3>🏖️ Activities</h3>
+                <p>Visitors to Amery Beach can enjoy swimming, snorkeling, beach picnics, sunset viewing, photography, and various water sports for both relaxation and adventure.</p>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Back Button -->
+    <div class="card-footer-LM">
+        <a href="../contact.html" class=" nav-link btn-primary ">Book Now</a>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>5000+</h3>
+                    <p>Happy Guests</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Unique Experiences</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4.9★</h3>
+                    <p>Average Rating</p>
+                </div>
+                <div class="stat-card">
+                    <h3>8 Years</h3>
+                    <p>In Business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Feel Mati Hub</h4>
+                <p>Your gateway to the untouched beauty of Davao Oriental's coastal paradise.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: feelmatihub@gmail.com</p>
+                <p>Phone: +63 964-146-9693</p>
+                <p>Location: Mati City, Davao Oriental</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61584337844512" target="_blank" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">t</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Feel Mati Hub. All rights reserved. Crafted with love for tourism.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
