@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00B8A9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Head circle -->
+  <circle cx="12" cy="8" r="4" fill="url(#profileGradient)"></circle>
+  <!-- Body/shoulders -->
+  <path d="M 4 20 Q 4 14 12 14 Q 20 14 20 20" fill="url(#profileGradient)"></path>
+</svg>
